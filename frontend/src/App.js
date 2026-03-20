@@ -8,7 +8,7 @@ function App() {
   const [result, setResult] = useState([]);
   const [history, setHistory] = useState([]);
 
-  const API = "http://localhost:5000";
+  const API = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
   const fetchHistory = async () => {
     const res = await fetch(API + "/history");
@@ -33,7 +33,7 @@ function App() {
     });
 
     const data = await res.json();
-    setResult(data); // ✅ backend returns array
+    setResult(data);
 
     setTimeout(() => {
       setLoading(false);
@@ -54,7 +54,6 @@ function App() {
 
       <button onClick={handleSubmit}>Generate</button>
 
-      {/* 🎬 Scroll Animation */}
       {loading && (
         <div className="scroll">
           <div className="paper"></div>
@@ -62,7 +61,6 @@ function App() {
         </div>
       )}
 
-      {/* 📦 Result Cards */}
       {showCard && result.length > 0 && (
         <div className="results">
           {result.map((venue, idx) => (
@@ -76,7 +74,6 @@ function App() {
         </div>
       )}
 
-      {/* 📜 History */}
       <h3>History</h3>
       {history.map((item, i) => (
         <div key={i} className="history">
