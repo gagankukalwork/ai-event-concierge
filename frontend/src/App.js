@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import "./App.css";
 
 function App() {
@@ -10,15 +10,15 @@ function App() {
 
   const API = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
-  const fetchHistory = async () => {
+  const fetchHistory = useCallback(async () => {
     const res = await fetch(API + "/history");
     const data = await res.json();
     setHistory(data);
-  };
+  }, [API]);
 
   useEffect(() => {
     fetchHistory();
-  }, []);
+  }, [fetchHistory]);
 
   const handleSubmit = async () => {
     if (!input) return;
