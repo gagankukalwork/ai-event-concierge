@@ -1,0 +1,87 @@
+body {
+  background: url('../public/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  letter-spacing: 2px;
+}
+
+.container {
+  text-align: center;
+  margin-top: 50px;
+  background-color: rgba(15, 23, 42, 0.75);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+input {
+  padding: 10px;
+  width: 300px;
+}
+
+button {
+  padding: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.scroll {
+  margin-top: 30px;
+}
+
+.paper {
+  width: 0;
+  height: 150px;
+  background: #fef3c7;
+  margin: auto;
+  border-radius: 5px;
+  animation: unfold 2s ease forwards;
+}
+
+@keyframes unfold {
+  0% { width: 0; }
+  100% { width: 300px; }
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  background-color: #fff9b0;
+  color: black;
+  padding: 20px;
+  margin: 20px auto;
+  width: 300px;
+  border-radius: 10px;
+  animation: fade 0.5s ease;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
+  background-size: 100% 24px;
+  background-repeat: repeat-y;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.history {
+  background: rgba(30, 41, 59, 0.85);
+  margin: 10px auto;
+  width: 300px;
+  padding: 10px;
+  border-radius: 8px;
+}
