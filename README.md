@@ -1,7 +1,7 @@
 # AI Event Concierge
 
 An AI-powered event planning assistant that suggests venues for event ideas and stores them in a database for future reference.  
-Built with React (frontend), Express (backend), Supabase (database), and deployed on Vercel and Railway.
+Built with React (frontend), Express (backend), postgres insurance railway , and deployed on Vercel and Railway.
 
 ## Live Demo
 - Frontend (Vercel): https://ai-event-concierge-git-main-gagankukalworks-projects.vercel.app/
